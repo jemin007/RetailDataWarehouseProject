@@ -1,0 +1,17 @@
+# Ignore user-specific and auto-generated files
+*.user
+*.suo
+*.vssscc
+*.vspscc
+*.database
+
+# Ignore build artifacts
+bin/
+obj/
+
+# Ignore .vs folder
+.vs/
+
+# Optional: ignore everything in the Package folder except .dtsx files
+Package/*
+!Package/*.dtsx
