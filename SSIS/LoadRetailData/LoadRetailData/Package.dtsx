@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="4/25/2025 5:37:14 PM"
@@ -11,9 +11,1324 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionGUID="{615191E8-0D74-4BCC-9129-E878FE4A2390}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{E1B79525-70F7-4A33-9FFA-34364CDDA2D5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
-  <DTS:Variables />
-  <DTS:Executables />
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CRM]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{72262F35-0C07-4388-BAAF-6A626E4F047B}"
+      DTS:ObjectName="CRM">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Projects\RetailDWH\data\source_crm\cust_info.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cst_id"
+              DTS:DTSID="{6EAA5031-66C4-4355-856F-3516EC874DC0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cst_key"
+              DTS:DTSID="{AA8C611E-C784-4482-87F7-4830A4C38348}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cst_firstname"
+              DTS:DTSID="{7FB2D25A-85BA-44EF-9482-2290A6D4BFCF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cst_lastname"
+              DTS:DTSID="{8041EE8E-BB7B-4A0F-A9BB-D91E86813AB2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cst_marital_status"
+              DTS:DTSID="{92B9452D-BAE7-486A-92C3-7DAB3599C68C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cst_gndr"
+              DTS:DTSID="{3EA630FF-DBE3-4E8D-9F8E-7A907FF429ED}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cst_create_date"
+              DTS:DTSID="{B084E412-ED8B-48BA-90A4-2DE1C094F64F}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ERP]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{E5DB7EEB-8503-49ED-8302-B59A32ED0CDE}"
+      DTS:ObjectName="ERP">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Projects\RetailDWH\data\source_erp\CUST_AZ12.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CID"
+              DTS:DTSID="{4E2654B8-8E1A-45B2-AFCA-CE9D54A68381}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BDATE"
+              DTS:DTSID="{F3B76B8C-27FC-46BF-A7DA-20255F2010C7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GEN"
+              DTS:DTSID="{BFC81209-ED4D-46FD-BD59-3728874D52B3}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[JEMIN\MSSQLSERVER01.DataWarehouseRetail]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{FBF166AE-C933-485F-8EC7-45E63CDDD96B}"
+      DTS:ObjectName="JEMIN\MSSQLSERVER01.DataWarehouseRetail">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=JEMIN\MSSQLSERVER01;Initial Catalog=DataWarehouseRetail;Provider=MSOLEDBSQL.1;Persist Security Info=False;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{FBF166AE-C933-485F-8EC7-45E63CDDD96B}JEMIN\MSSQLSERVER01.DataWarehouseRetail;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{467EEDEE-7340-470B-BD94-11F3126E32C5}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ArchiveFolderCRM">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Projects\RetailDWH\archive\crm</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{284E5F27-B568-4C55-A274-43DD39CE9B8F}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ArchiveFolderERP">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Projects\RetailDWH\archive\erp</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{284E4AFE-E1F8-48E3-A564-B450E6EF92E4}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{46C31969-2E9E-46AF-AFE4-EE9AF30C7111}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceFolderCRM">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Projects\RetailDWH\data\source_crm</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6AD4A989-6326-49C7-AFD4-F38D365B0545}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceFolderERP">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Projects\RetailDWH\data\source_erp</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\SourceFolderCRM"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{2527A9A9-8D53-479C-A113-4C601C59B27F}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SourceFolderCRM">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{97CF04D8-350D-4E0E-A91B-96D9D8D99E1B}"
+        DTS:ObjectName="{97CF04D8-350D-4E0E-A91B-96D9D8D99E1B}">
+        <DTS:PropertyExpression
+          DTS:Name="Directory">@[User::SourceFolderCRM]</DTS:PropertyExpression>
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="D:\Projects\RetailDWH\data\source_crm" />
+            <FEFEProperty
+              FileSpec="*.csv" />
+            <FEFEProperty
+              FileNameRetrievalType="1" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SourceFolderCRM\DFT_CRM"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{229F6809-46CA-44E2-BE7B-D6B697848DFD}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DFT_CRM"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\SourceFolderCRM\DFT_CRM\Flat File Source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[CRM]"
+                      connectionManagerRefId="Package.ConnectionManagers[CRM]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].Columns[cst_id]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cst_id]"
+                          length="50"
+                          lineageId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].Columns[cst_id]"
+                          name="cst_id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].Columns[cst_key]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cst_key]"
+                          length="50"
+                          lineageId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].Columns[cst_key]"
+                          name="cst_key"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].Columns[cst_firstname]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cst_firstname]"
+                          length="50"
+                          lineageId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].Columns[cst_firstname]"
+                          name="cst_firstname"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].Columns[cst_lastname]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cst_lastname]"
+                          length="50"
+                          lineageId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].Columns[cst_lastname]"
+                          name="cst_lastname"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].Columns[cst_marital_status]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cst_marital_status]"
+                          length="50"
+                          lineageId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].Columns[cst_marital_status]"
+                          name="cst_marital_status"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].Columns[cst_gndr]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cst_gndr]"
+                          length="50"
+                          lineageId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].Columns[cst_gndr]"
+                          name="cst_gndr"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].Columns[cst_create_date]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cst_create_date]"
+                          length="50"
+                          lineageId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].Columns[cst_create_date]"
+                          name="cst_create_date"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cst_id]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="cst_id" />
+                        <externalMetadataColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cst_key]"
+                          dataType="wstr"
+                          length="50"
+                          name="cst_key" />
+                        <externalMetadataColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cst_firstname]"
+                          dataType="wstr"
+                          length="50"
+                          name="cst_firstname" />
+                        <externalMetadataColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cst_lastname]"
+                          dataType="wstr"
+                          length="50"
+                          name="cst_lastname" />
+                        <externalMetadataColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cst_marital_status]"
+                          dataType="wstr"
+                          length="50"
+                          name="cst_marital_status" />
+                        <externalMetadataColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cst_gndr]"
+                          dataType="wstr"
+                          length="50"
+                          name="cst_gndr" />
+                        <externalMetadataColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cst_create_date]"
+                          dataType="wstr"
+                          length="50"
+                          name="cst_create_date" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[bronze].[crm_cust_info_load]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[JEMIN\MSSQLSERVER01.DataWarehouseRetail]"
+                      connectionManagerRefId="Package.ConnectionManagers[JEMIN\MSSQLSERVER01.DataWarehouseRetail]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cst_create_date]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="cst_create_date"
+                          externalMetadataColumnId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cst_create_date]"
+                          lineageId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].Columns[cst_create_date]" />
+                        <inputColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cst_id]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="cst_id"
+                          externalMetadataColumnId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cst_id]"
+                          lineageId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].Columns[cst_id]" />
+                        <inputColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cst_key]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="cst_key"
+                          externalMetadataColumnId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cst_key]"
+                          lineageId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].Columns[cst_key]" />
+                        <inputColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cst_firstname]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="cst_firstname"
+                          externalMetadataColumnId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cst_firstname]"
+                          lineageId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].Columns[cst_firstname]" />
+                        <inputColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cst_lastname]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="cst_lastname"
+                          externalMetadataColumnId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cst_lastname]"
+                          lineageId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].Columns[cst_lastname]" />
+                        <inputColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cst_marital_status]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="cst_marital_status"
+                          externalMetadataColumnId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cst_marital_status]"
+                          lineageId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].Columns[cst_marital_status]" />
+                        <inputColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cst_gndr]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="cst_gndr"
+                          externalMetadataColumnId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cst_gndr]"
+                          lineageId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output].Columns[cst_gndr]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cst_id]"
+                          dataType="i4"
+                          name="cst_id" />
+                        <externalMetadataColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cst_key]"
+                          dataType="wstr"
+                          length="50"
+                          name="cst_key" />
+                        <externalMetadataColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cst_firstname]"
+                          dataType="wstr"
+                          length="50"
+                          name="cst_firstname" />
+                        <externalMetadataColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cst_lastname]"
+                          dataType="wstr"
+                          length="50"
+                          name="cst_lastname" />
+                        <externalMetadataColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cst_marital_status]"
+                          dataType="wstr"
+                          length="50"
+                          name="cst_marital_status" />
+                        <externalMetadataColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cst_gndr]"
+                          dataType="wstr"
+                          length="50"
+                          name="cst_gndr" />
+                        <externalMetadataColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cst_create_date]"
+                          dataType="dbDate"
+                          name="cst_create_date" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\SourceFolderCRM\DFT_CRM.Paths[Flat File Source Output]"
+                  endId="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\SourceFolderCRM\DFT_CRM\Flat File Source.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SourceFolderCRM\File System Task"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="File System Task"
+          DTS:DTSID="{61F6003F-6F1D-4C7C-ABCE-165382B02968}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="File System Task"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="Destination">@[User::ArchiveFolderCRM] + "\\" + RIGHT(@[User::FileName], LEN(@[User::FileName]) - FINDSTRING(REVERSE(@[User::FileName]), "\\", 1) + 1)</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="MoveFile"
+              TaskSourcePath="User::FileName"
+              TaskIsSourceVariable="True"
+              TaskDestinationPath="D:\Projects\RetailDWH\archive\crm\"
+              TaskIsDestinationVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SourceFolderCRM.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{F0BD22B8-AFBA-4B4D-9B4A-EFA9C54B077F}"
+          DTS:From="Package\SourceFolderCRM\DFT_CRM"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\SourceFolderCRM\File System Task" />
+      </DTS:PrecedenceConstraints>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{18EB1CC6-B6F4-4C3A-A8F2-5C44E9FCF53B}"
+          DTS:ObjectName="{18EB1CC6-B6F4-4C3A-A8F2-5C44E9FCF53B}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::FileName" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SourceFolderERP"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{718FD6CE-AAB0-4DE8-B5B9-E447D3D48840}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SourceFolderERP">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{693F01DA-D910-447D-A280-7710728F5AE4}"
+        DTS:ObjectName="{693F01DA-D910-447D-A280-7710728F5AE4}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="D:\Projects\RetailDWH\data\source_erp" />
+            <FEFEProperty
+              FileSpec="*.csv" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SourceFolderERP\DFT_ERP"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{888157C8-F2C1-4D45-B190-263542669D85}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DFT_ERP"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\SourceFolderERP\DFT_ERP\Flat File Source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[ERP]"
+                      connectionManagerRefId="Package.ConnectionManagers[ERP]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Outputs[Flat File Source Output].Columns[CID]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CID]"
+                          length="50"
+                          lineageId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Outputs[Flat File Source Output].Columns[CID]"
+                          name="CID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Outputs[Flat File Source Output].Columns[BDATE]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[BDATE]"
+                          length="50"
+                          lineageId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Outputs[Flat File Source Output].Columns[BDATE]"
+                          name="BDATE"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Outputs[Flat File Source Output].Columns[GEN]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[GEN]"
+                          length="50"
+                          lineageId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Outputs[Flat File Source Output].Columns[GEN]"
+                          name="GEN"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CID]"
+                          dataType="wstr"
+                          length="50"
+                          name="CID" />
+                        <externalMetadataColumn
+                          refId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[BDATE]"
+                          dataType="wstr"
+                          length="50"
+                          name="BDATE" />
+                        <externalMetadataColumn
+                          refId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[GEN]"
+                          dataType="wstr"
+                          length="50"
+                          name="GEN" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\SourceFolderERP\DFT_ERP\OLE DB Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[bronze].[erp_cust_az12_load]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SourceFolderERP\DFT_ERP\OLE DB Destination.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[JEMIN\MSSQLSERVER01.DataWarehouseRetail]"
+                      connectionManagerRefId="Package.ConnectionManagers[JEMIN\MSSQLSERVER01.DataWarehouseRetail]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\SourceFolderERP\DFT_ERP\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\SourceFolderERP\DFT_ERP\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CID]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="CID"
+                          externalMetadataColumnId="Package\SourceFolderERP\DFT_ERP\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cid]"
+                          lineageId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Outputs[Flat File Source Output].Columns[CID]" />
+                        <inputColumn
+                          refId="Package\SourceFolderERP\DFT_ERP\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BDATE]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="BDATE"
+                          externalMetadataColumnId="Package\SourceFolderERP\DFT_ERP\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[bdate]"
+                          lineageId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Outputs[Flat File Source Output].Columns[BDATE]" />
+                        <inputColumn
+                          refId="Package\SourceFolderERP\DFT_ERP\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GEN]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="GEN"
+                          externalMetadataColumnId="Package\SourceFolderERP\DFT_ERP\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gen]"
+                          lineageId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Outputs[Flat File Source Output].Columns[GEN]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\SourceFolderERP\DFT_ERP\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cid]"
+                          dataType="wstr"
+                          length="50"
+                          name="cid" />
+                        <externalMetadataColumn
+                          refId="Package\SourceFolderERP\DFT_ERP\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[bdate]"
+                          dataType="dbDate"
+                          name="bdate" />
+                        <externalMetadataColumn
+                          refId="Package\SourceFolderERP\DFT_ERP\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gen]"
+                          dataType="wstr"
+                          length="50"
+                          name="gen" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\SourceFolderERP\DFT_ERP\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\SourceFolderERP\DFT_ERP\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SourceFolderERP\DFT_ERP\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\SourceFolderERP\DFT_ERP\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\SourceFolderERP\DFT_ERP\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\SourceFolderERP\DFT_ERP\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\SourceFolderERP\DFT_ERP.Paths[Flat File Source Output]"
+                  endId="Package\SourceFolderERP\DFT_ERP\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\SourceFolderERP\DFT_ERP\Flat File Source.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SourceFolderERP\File System Task"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="File System Task"
+          DTS:DTSID="{D428D4D9-3CE0-480C-B528-E7D984546038}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="File System Task"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="Destination">@[User::ArchiveFolderERP] + "\\" + RIGHT(@[User::FileName], LEN(@[User::FileName]) - FINDSTRING(REVERSE(@[User::FileName]), "\\", 1) + 1)</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="MoveFile"
+              TaskSourcePath="User::FileName"
+              TaskIsSourceVariable="True"
+              TaskDestinationPath="D:\Projects\RetailDWH\archive\erp\"
+              TaskIsDestinationVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SourceFolderERP.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{A1F34FD4-DBDC-4B90-B1E7-4D0DAA971EA3}"
+          DTS:From="Package\SourceFolderERP\DFT_ERP"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\SourceFolderERP\File System Task" />
+      </DTS:PrecedenceConstraints>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{D769220F-7948-4A8A-A4C0-D4C88E70BE03}"
+          DTS:ObjectName="{D769220F-7948-4A8A-A4C0-D4C88E70BE03}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::FileName" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="132,42"
+          Id="Package\SourceFolderCRM\DFT_CRM"
+          TopLeft="44,19" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\SourceFolderCRM\File System Task"
+          TopLeft="53.75,108.75" />
+        <EdgeLayout
+          Id="Package\SourceFolderCRM.PrecedenceConstraints[Constraint]"
+          TopLeft="110,61">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="25.25,47.75"
+              Start="0,0"
+              End="25.25,40.25">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.875" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.875"
+                    Point2="0,23.875"
+                    Point3="4,23.875" />
+                  <mssgle:LineSegment
+                    End="21.25,23.875" />
+                  <mssgle:CubicBezierSegment
+                    Point1="21.25,23.875"
+                    Point2="25.25,23.875"
+                    Point3="25.25,27.875" />
+                  <mssgle:LineSegment
+                    End="25.25,40.25" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="366,223"
+          Size="366,266"
+          Id="Package\SourceFolderCRM"
+          TopLeft="227,50" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\SourceFolderERP\DFT_ERP"
+          TopLeft="69,17" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\SourceFolderERP\File System Task"
+          TopLeft="67,104.5" />
+        <EdgeLayout
+          Id="Package\SourceFolderERP.PrecedenceConstraints[Constraint]"
+          TopLeft="133.5,59">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="15,45.5"
+              Start="0,0"
+              End="15,38">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.75"
+                    Point2="0,22.75"
+                    Point3="4,22.75" />
+                  <mssgle:LineSegment
+                    End="11,22.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11,22.75"
+                    Point2="15,22.75"
+                    Point3="15,26.75" />
+                  <mssgle:LineSegment
+                    End="15,38" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="308,201"
+          Size="308,244"
+          Id="Package\SourceFolderERP"
+          TopLeft="689.25,55" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\SourceFolderCRM\DFT_CRM">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\SourceFolderCRM\DFT_CRM\Flat File Source"
+          TopLeft="393,46" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination"
+          TopLeft="386,257" />
+        <EdgeLayout
+          Id="Package\SourceFolderCRM\DFT_CRM.Paths[Flat File Source Output]"
+          TopLeft="472.75,88">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,169"
+              Start="0,0"
+              End="0,161.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,161.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\SourceFolderCRM\DFT_CRM\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\SourceFolderERP\DFT_ERP">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\SourceFolderERP\DFT_ERP\Flat File Source"
+          TopLeft="531.25,220" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\SourceFolderERP\DFT_ERP\OLE DB Destination"
+          TopLeft="523.75,410" />
+        <EdgeLayout
+          Id="Package\SourceFolderERP\DFT_ERP.Paths[Flat File Source Output]"
+          TopLeft="610.75,262">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,148"
+              Start="0,0"
+              End="0,140.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,140.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\SourceFolderERP\DFT_ERP\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
