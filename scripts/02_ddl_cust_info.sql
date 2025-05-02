@@ -8,6 +8,35 @@ Script Purpose:
 
 */
 
+IF OBJECT_ID('bronze.bronze_main', 'U') IS NOT NULL
+    DROP TABLE bronze.bronze_main;
+GO
+
+CREATE TABLE [bronze].[bronze_main](
+	[tbl_name] [varchar](60) NULL,
+	[load_tbl_records] [int] NULL,
+	[load_tbl_date] [date] NULL,
+	[man_tbl_records] [int] NULL,
+	[last_load] [date] NULL,
+	[new_insert] [int] NULL
+);
+
+GO
+
+----------------INSERT Table Names----------------
+
+
+INSERT INTO bronze.bronze_main (tbl_name)
+VALUES 
+    ('crm_cust_info'),
+    ('crm_prd_info'),
+    ('crm_sales_details'),
+    ('erp_loc_a101'),
+    ('erp_cust_az12'),
+    ('erp_px_cat_g1v2');
+
+---------------Main Tables---------------
+
 IF OBJECT_ID('bronze.crm_cust_info', 'U') IS NOT NULL
     DROP TABLE bronze.crm_cust_info;
 GO
