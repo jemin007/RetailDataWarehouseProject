@@ -5,6 +5,11 @@ Bronze Merge Script: Merge all data from load table to main tables in bronze lay
 Script Purpose:
     This procedure loads all data from _load table to main tables.
 
+	Syntax: 
+		EXEC bronze.merge_load
+		OR
+		EXEC bronze.merge_load 1
+
 */
 
 
@@ -288,32 +293,29 @@ BEGIN
 
 
 
-	--Optional (To archive the load tables after loaded)
+	--Optional (To truncate the load tables after loaded)
 	IF @archive = 1
-	BEGIN
-		DECLARE @suffix NVARCHAR(20) = FORMAT(GETDATE(), 'yyyyMMdd');
-		DECLARE @sql NVARCHAR(MAX);
+BEGIN
+	PRINT 'Truncating all _load tables...';
 
-		PRINT 'Archiving (renaming) all _load tables...';
+	TRUNCATE TABLE bronze.crm_cust_info_load;
+	PRINT 'Truncated bronze.crm_cust_info_load';
 
-		SET @sql = 'EXEC sp_rename ''bronze.crm_cust_info_load'', ''crm_cust_info_archive_' + @suffix + '''';
-		EXEC(@sql);
+	TRUNCATE TABLE bronze.crm_prd_info_load;
+	PRINT 'Truncated bronze.crm_prd_info_load';
 
-		SET @sql = 'EXEC sp_rename ''bronze.crm_prd_info_load'', ''crm_prd_info_archive_' + @suffix + '''';
-		EXEC(@sql);
+	TRUNCATE TABLE bronze.crm_sales_details_load;
+	PRINT 'Truncated bronze.crm_sales_details_load';
 
-		SET @sql = 'EXEC sp_rename ''bronze.crm_sales_details_load'', ''crm_sales_details_archive_' + @suffix + '''';
-		EXEC(@sql);
+	TRUNCATE TABLE bronze.erp_loc_a101_load;
+	PRINT 'Truncated bronze.erp_loc_a101_load';
 
-		SET @sql = 'EXEC sp_rename ''bronze.erp_loc_a101_load'', ''erp_loc_a101_archive_' + @suffix + '''';
-		EXEC(@sql);
+	TRUNCATE TABLE bronze.erp_cust_az12_load;
+	PRINT 'Truncated bronze.erp_cust_az12_load';
 
-		SET @sql = 'EXEC sp_rename ''bronze.erp_cust_az12_load'', ''erp_cust_az12_archive_' + @suffix + '''';
-		EXEC(@sql);
+	TRUNCATE TABLE bronze.erp_px_cat_g1v2_load;
+	PRINT 'Truncated bronze.erp_px_cat_g1v2_load';
 
-		SET @sql = 'EXEC sp_rename ''bronze.erp_px_cat_g1v2_load'', ''erp_px_cat_g1v2_archive_' + @suffix + '''';
-		EXEC(@sql);
-
-		PRINT 'All _load tables renamed successfully.';
-	END
+	PRINT 'All _load tables truncated successfully.';
+END
 END
